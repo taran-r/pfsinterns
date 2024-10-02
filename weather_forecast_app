@@ -28,7 +28,7 @@ class WeatherApp:
             messagebox.showwarning("Input Error", "Please enter a location.")
             return
         
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={self.api_key}"
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={self.api_key}&units=metric"
         
         try:
             response = requests.get(url)
