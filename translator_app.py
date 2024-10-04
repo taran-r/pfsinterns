@@ -21,7 +21,7 @@ class TranslatorApp:
 
         self.target_lang = ttk.Combobox(root, values=[name.capitalize() for name in LANGUAGES.values()])
         self.target_lang.pack(pady=10)
-        self.target_lang.set("English")  # Default to English
+        self.target_lang.set("English")
 
         self.translate_button = tk.Button(root, text="Translate", command=self.translate_text)
         self.translate_button.pack(pady=10)
@@ -39,8 +39,8 @@ class TranslatorApp:
         if source_text and target_language:
             try:
                 result = self.translator.translate(source_text, dest=target_language)
-                self.output_text.delete("1.0", tk.END)  # Clear previous output
-                self.output_text.insert(tk.END, result.text)  # Insert translated text
+                self.output_text.delete("1.0", tk.END)  
+                self.output_text.insert(tk.END, result.text)  
             except Exception as e:
                 messagebox.showerror("Translation Error", f"An error occurred: {e}")
 
