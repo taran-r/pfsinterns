@@ -47,9 +47,9 @@ class WeatherApp:
                             f"Wind Speed: {wind_speed} m/s")
             self.output_label.config(text=weather_info)
         
-        except ValueError as e:
-            messagebox.showerror("Error", str(e))
-        except Exception as e:
+        except ValueError as exception:
+            messagebox.showerror("Error", str(exception))
+        except Exception as exception:
             messagebox.showerror("Error", "An error occurred while fetching the weather data.")
 
 if __name__ == "__main__":
