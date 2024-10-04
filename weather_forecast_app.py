@@ -8,7 +8,7 @@ class WeatherApp:
         self.root.title("Weather Forecast Application")
         self.root.geometry("400x400")
 
-        self.api_key = "8a901d40b0bda8190647563172804954"
+        self.api_key = "My_Weather_API_Key"
 
         self.location_label = tk.Label(root, text="Enter Location:")
         self.location_label.pack(pady=10)
